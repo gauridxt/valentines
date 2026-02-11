@@ -69,6 +69,8 @@ noBtn.addEventListener("click", () => {
 //     finalText.style.display = "block";
 // });
 
+
+
 // YES button click – full-screen surprise
 yesBtn.addEventListener("click", () => {
     // Hide the letter card
@@ -89,12 +91,12 @@ yesBtn.addEventListener("click", () => {
     // Add the new full-screen cat GIF to the page
     document.body.appendChild(fullCat);
 
-    // Fireworks
-    for (let i = 0; i < 5; i++) {
-        setTimeout(() => confetti({
-            particleCount: 150,
-            spread: 70,
-            origin: { y: 0.6 }
-        }), i * 500);
-    }
+    // // Fireworks
+    // for (let i = 0; i < 5; i++) {
+    //     setTimeout(() => confetti({
+    //         particleCount: 150,
+    //         spread: 70,
+    //         origin: { y: 0.6 }
+    //     }), i * 500);
+    // }
 });
