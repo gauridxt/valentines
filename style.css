@@ -104,6 +104,7 @@ p {
     justify-content: center;
     gap: 30px;
     position: relative;
+    margin-top: 50px; /* push buttons lower */
 }
 
 .no-wrapper{
