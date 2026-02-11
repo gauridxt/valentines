@@ -6,6 +6,7 @@ body {
     align-items: center;
     background-image: url("heart_bg.jpg");
     font-family: "Pixelify Sans", sans-serif;
+    overflow: hidden;
 }
 
 /* Envelope Screen */

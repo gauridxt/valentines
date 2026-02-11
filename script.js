@@ -58,13 +58,43 @@ noBtn.addEventListener("click", () => {
 
 // YES is clicked
 
+// yesBtn.addEventListener("click", () => {
+
+//     catImg.src = "cat_kiss.gif";
+
+//     document.querySelector(".letter-window").classList.add("final");
+
+//     buttons.style.display = "none";
+
+//     finalText.style.display = "block";
+// });
+
+// YES button click – full-screen surprise
 yesBtn.addEventListener("click", () => {
+    // Hide the letter card
+    document.querySelector(".letter-window").style.display = "none";
 
-    catImg.src = "cat_kiss.gif";
+    // Create a new full-screen cat kiss GIF
+    const fullCat = document.createElement("img");
+    fullCat.src = "cat_kiss.gif";
+    fullCat.style.position = "fixed";
+    fullCat.style.top = "50%";
+    fullCat.style.left = "50%";
+    fullCat.style.transform = "translate(-50%, -50%)";
+    fullCat.style.width = "100vw";
+    fullCat.style.height = "100vh";
+    fullCat.style.objectFit = "cover";
+    fullCat.style.zIndex = "100";
 
-    document.querySelector(".letter-window").classList.add("final");
+    // Add the new full-screen cat GIF to the page
+    document.body.appendChild(fullCat);
 
-    buttons.style.display = "none";
-
-    finalText.style.display = "block";
+    // Fireworks
+    for (let i = 0; i < 5; i++) {
+        setTimeout(() => confetti({
+            particleCount: 150,
+            spread: 70,
+            origin: { y: 0.6 }
+        }), i * 500);
+    }
 });
