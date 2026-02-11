@@ -149,20 +149,3 @@ display: inline-block;
     padding: 10px 20px;
     border-radius: 12px;
 }
-
-@media (max-width: 600px) {
-    #letter-buttons {
-        position: fixed;     /* positionne par rapport à l'écran */
-        bottom: 20px;        /* 20px depuis le bas de l'écran */
-        left: 50%;           /* centre horizontalement */
-        transform: translateX(-50%); /* centre parfaitement */
-        gap: 20px;           /* espace entre YES et NO */
-        z-index: 50;         /* au-dessus du reste */
-    }
-
-    .yes-btn,
-    .no-btn {
-        width: 140px;        /* un peu plus gros pour le tactile */
-        height: auto;
-    }
-}
