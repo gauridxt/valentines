@@ -151,25 +151,28 @@ display: inline-block;
 }
 
 .love-page {
-    height: 100vh;
+    min-height: 100vh; /* fills at least full screen */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* start from top instead of center */
     align-items: center;
-    gap: 40px;
-    background-image: url("heart_bg.jpg");
+    gap: 5vh; /* vertical spacing scales */
+    padding-top: 5vh; /* some top spacing */
+    padding-bottom: 5vh;
 }
 
+
 .love-text {
-    width: 80%;
-    max-width: 500px;
+    width: 90vw;       /* scale with screen width */
+    max-width: 600px;  /* don't exceed this */
             /* Add shadow */
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
     transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 #letter-button {
-    width: 200px;
+    width: 25vw;        /* relative to screen width */
+    max-width: 180px;
     cursor: pointer;
     text-align: center;
     animation: pulse 1.5s infinite;
@@ -178,10 +181,9 @@ display: inline-block;
     transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-
 .letter-image {
-    width: 90%;
-    max-width: 600px;
+    width: 95vw;       /* almost full screen */
+    max-width: 600px;  /* keep readable on desktop */
     animation: popIn 0.4s ease;
                     /* Add shadow */
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
