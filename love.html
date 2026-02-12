@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="love-page">
+
+    <!-- Message image -->
+    <img src="yay.png" class="love-text" id="message">
+
+    <!-- Small pulsating letter -->
+    <img src="open_letter.png" id="letter-button" />
+
+    <!-- Hidden love letter -->
+    <img src="final_letter.png" class="letter-image" id="love-letter" />
+
+
+    <script>
+        const letterBtn = document.getElementById("letter-button");
+        const letterImage = document.getElementById("love-letter");
+        const message = document.getElementById("message");
+
+        letterImage.style.display = "none";
+
+        letterBtn.addEventListener("click", () => {
+            message.style.display = "none";
+            letterBtn.style.display = "none";
+            letterImage.style.display = "block";
+        });
+    </script>
+
+</body>
+</html>
+
+
+

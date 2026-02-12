@@ -19,22 +19,6 @@ envelope.addEventListener("click", () => {
     },50);
 });
 
-// Logic to move the NO btn
-
-// noBtn.addEventListener("mouseover", () => {
-//     const min = 200;
-//     const max = 200;
-
-//     const distance = Math.random() * (max - min) + min;
-//     const angle = Math.random() * Math.PI * 2;
-
-//     const moveX = Math.cos(angle) * distance;
-//     const moveY = Math.sin(angle) * distance;
-
-//     noBtn.style.transition = "transform 0.3s ease";
-//     noBtn.style.transform = `translate(${moveX}px, ${moveY}px)`;
-// });
-
 // Logic to make YES btn to grow
 
 let yesScale = 1;
@@ -44,7 +28,7 @@ yesBtn.style.transformOrigin = "center center";
 yesBtn.style.transition = "transform 0.3s ease";
 
 noBtn.addEventListener("click", () => {
-    yesScale += 2;
+    yesScale += 3;
 
     if (yesBtn.style.position !== "fixed") {
         yesBtn.style.position = "fixed";
@@ -99,4 +83,22 @@ yesBtn.addEventListener("click", () => {
     //         origin: { y: 0.6 }
     //     }), i * 500);
     // }
+
+        // Redirect after 4 seconds (adjust to GIF length)
+setTimeout(() => {
+    document.body.classList.add("fade-out");
+
+    setTimeout(() => {
+        window.location.href = "love.html";
+    }, 600); // matches CSS duration
+}, 2880); // your kiss gif timing
 });
+
+letterBtn.addEventListener("click", () => {
+    message.style.display = "none";
+    letterBtn.style.display = "none";
+
+    letterImage.classList.add("show");
+});
+
+
