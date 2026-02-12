@@ -91,7 +91,7 @@ setTimeout(() => {
     setTimeout(() => {
         window.location.href = "love.html";
     }, 600); // matches CSS duration
-}, 2880); // your kiss gif timing
+}, 3000); // your kiss gif timing
 });
 
 letterBtn.addEventListener("click", () => {
