@@ -100,4 +100,3 @@ letterBtn.addEventListener("click", () => {
 
     letterImage.classList.add("show");
 });
-
